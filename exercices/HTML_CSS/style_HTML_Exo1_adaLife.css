@@ -1,0 +1,31 @@
+
+body{
+    background: gray;
+    font-family: Arial, sans-serif;
+}
+
+/* s'applique à un sélecteur, ici h1*/
+h1{
+    color: blueviolet;
+}
+
+/* . s'applique au sélecteur de classe class=""*/
+.text-blue{
+    color: blue;
+    margin-top: 50px; /* augmente espace entre les balises qui contienent la class="text-blue"*/
+}
+
+/* # s'applique au sélecteur d'ID id="". Attention chaque ID est unique*/
+#size-1{
+    font-size: 70px;
+}
+
+/* s'applique à toutes les balises p*/
+p{
+    font-size: 20px;
+}
+
+/* s'applique à toutes les balises li*/
+li{
+    font-size: 20px;
+}
