@@ -7,6 +7,7 @@ body {
 }
 
 /* cibler l'image */
+/* possible de modifier les valeurs des propriétés directement dans l'inspecteur sur chrome pour visualiser en direct*/
 img {
   width: 200px;
   height: 275px;
@@ -14,9 +15,12 @@ img {
   border: 5px solid hotpink;
 }
 
-/* alligner les puces au texte
+/* alligner les puces au texte*/
 li {
   text-align: center;
   list-style-position: inside;
+  list-style: none; /* none efface la puce*/
 }
-*/
+
+/* main{display : flex;} -> flexbox qui permet d'orienté la position dans la page */
+/* possible d'appliquer un style à plusieurs balise : h1, p {} (les balises sont séparées par la virgule) */
