@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>La vie d'Ada</title>
+    <link rel="stylesheet" href="style_CSS_exo1.css" />
+  </head>
+  <body>
+    <main>
+      <h1>La vie d'Ada</h1>
+      <button><a href="#ancre1">Bas de Page</a></button>
+      <!-- href="#ancre1" permet de naviguer d'un point à l'autre dans la page-->
+      <p>
+        Ada Lovelace, mathématicienne britannique du XIXe siècle,est considérée
+        comme la première programmeuse de l'histoire pour avoir écrit le premier
+        algorithme destiné à être exécuté par une machine, la machine analytique
+        de Charles Babbage, ce qui en fait une pionnière visionnaire de
+        l'informatique moderne.
+      </p>
+      <p>
+        Le nom de l'école <b>Ada Tech School</b> s'inspire de cette
+        mathématicienne.
+      </p>
+      <img
+        title="Ada Lovelace"
+        src="HTML-CSS-Ada2.jpeg"
+        alt="L'image représente la mathématicienne Ada Lovelace"
+      />
+      <p>En quelques points :</p>
+      <ul>
+        <li>
+          Pionnière de l'informatique : créa le premier algorithme pour
+          ordinateur
+        </li>
+        <li>Mathématicienne visionnaire du 19e siècle</li>
+        <li>Collaboratrice de Babbage sur la machine analytique</li>
+        <li id="ancre1">
+          <!-- en cliquant sur ancre plus haut dans la page, on est censé arrivé ici-->
+          Anticipait le potentiel des ordinateurs au delà des simples calculs
+        </li>
+      </ul>
+      <!-- form : permet d'expliquer au navigateur qu'on se situe dans un formulaire : OBLIGATOIRE -->
+      <!-- sans form, l'attribut required n'est pas pris en compte -->
+
+      <form>
+        <!-- label indique nom du champ à venir. différent de placeholder qui se retrouve dans le champ-->
+        <label>Identifiant (8 chiffres)</label>
+        <!-- input = champ de formulaire -->
+        <!-- placeholder : indique à l'utilisateur ce qu'il peut renseigner dans le champ -->
+        <!-- autocomplete : complète automatiquement le champ-->
+        <!-- attention autocomplete password très risqué et pas compatible avec RGPD -->
+        <!-- checkbox : case à cocher -->
+        <input
+          type="number"
+          placeholder="renseigner ID"
+          autocomplete="cc-number"
+          required
+        />
+        <label>Nom</label>
+        <input type="text" placeholder="renseigner Nom" required />
+        <label>Email</label>
+        <input
+          type="email"
+          placeholder="renseigner email"
+          autocomplete="email"
+          required
+        />
+        <label>Password</label>
+        <input
+          type="password"
+          placeholder="renseigner password"
+          autocomplete="current-password"
+        />
+        <input type="checkbox" required />
+        <input type="submit" required />
+        <button type="button">test</button>
+      </form>
+    </main>
+  </body>
+</html>

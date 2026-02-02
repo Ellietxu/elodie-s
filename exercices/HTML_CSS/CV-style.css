@@ -1,3 +1,25 @@
+body {
+  display: grid;
+  margin: 20px;
+}
+#header-right {
+  display: grid;
+  font-size: 24px;
+  border: 2px solid black;
+}
+
+#header-left {
+  font-size: 24px;
+  border: 2px solid red;
+  display: flex;
+}
+
+#test {
+  font-size: 18px;
+  border: 2px solid green;
+  display: flex;
+}
+
 .general {
 }
 .parcours {
