@@ -1,0 +1,78 @@
+/* display: grid; permet de créer une grille en fonction du nombre de colonne et de ligne que l'on souhaite
+grid..columns: x valeurs pour colonne
+grid..rows: x valeurs pour lignes
+repeat(nb de répétitions, valeurs)
+valeurs en pixel 'px' : taille
+valeur en fraction 'fr' : répartition dans l'espace (évite débordement avec px)
+
+--> ICI ON VEUT UNE GRILLE 3*3 SOIT 9 CASES <--
+
+.container {
+  display: grid;
+  grid-template-columns: 300px 300px 300px; 
+                        OU 1fr 1fr 1fr (répartition égale)
+                        OU 1fr 2fr 1fr (colonne centrale prend deux fois plus d'espace et donc les 1fr se répartissent)
+                        OU 100px 1fr 1fr
+                        ou 100px repeat(2, 1fr)
+  grid-template-rows: repeat(3, 300px);
+}
+
+*/
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px 40px; /*gap permet d'aérer la grille en créant un espace entre les éléments, val.ligne val.colonne*/
+  outline: 2px dashed yellow;
+}
+
+.container > div { /* > div : sélecteur css combiné pour appliquer le même style dans chaque élément div de la class*/
+  border: 2px solid gray;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* positionner item dans grille en utilisant valeur du repère
+Repère commence à 1
+Ici pour 3 colonnes et 3 lignes : le repère ira de 1 à 4
+grid-column ou row: valeur repère début / valeur repère fin
+
+.item1 {
+  grid-column: 2/4;
+  grid-row: 1/3;
+}
+*/
+
+/*.item1 {
+  grid-column: 2/4;
+  grid-row: 1/3;
+}
+*/
+
+/* valeur négative permet d'indiquer à un élement de venir occupé l'espace jusqu'au dernier repère
+-1 pour dernier, -2 pour avant dernier
+évite d'indiquer la valeur de fin (ICI 4)
+à utiliser dans tableau dynamiquement modifiable ex: grid-template-columns: repeat (4, 1fr)
+    si 4 au lieu de -1 indiqué, item1 va occuper 3 colonnes sur 4
+    avec -1 qu'importe le nombre de colonne, item1 va jusqu'au bout
+*/
+
+.item1 {
+  grid-column: 1 / -1;
+  grid-row: 1/3;
+}
+
+/* chevauchement
+*/
+
+.item6 { /*on veut que 6 chevauche 1*/
+  background-color: red;
+  grid-column: 3/4;
+  grid-row: 1/3;
+  
+} 
+/* problème à cause de la valeur -1 de l'item1 qui force l'occupation de l'espace au dela du repère
+l'item1 passe en dessous du 6 par manque de place}
+on va donc venir attribuer la même valeur -row de 6 dans 1
