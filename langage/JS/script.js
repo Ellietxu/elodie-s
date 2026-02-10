@@ -53,7 +53,7 @@ console.log(age3);
 
 let age4 = 20;
 age4 = 21; // ici c'est ok car la vriable let permet de changer la valeur de age
-
+console.log(age4);
 // FONCTIONS
 // function nomFonction() { ...code de la fonction }
 
@@ -66,9 +66,81 @@ function whoIam() {
 
 whoIam();
 
+// utiliser des paramètres
+
+// -déclaration des paramètres : ici prenom
+
+function maFonction(prenom) {
+  // let prenom = "argument"
+  console.log("Bienvenue " + prenom + " !");
+}
+
+// -valeur codée en dur
+// --la fonction appelée affecte l'argument "Elo" au paraM prenom
+maFonction("Elo");
+
+// -valeur passée via une variable
+// --la fonction appelée utilise la variable monPrenom comme argument et l'affecte au paraM prenom
+let monPrenom = "Gaelle";
+maFonction(monPrenom);
+
+// -default parameters : utilisé quand aucun n'argument n'est fourni pendant l'appel de la fonction
+// --If no value is passed, the function automatically uses the default value.
+
+function greet(name = "Guest") {
+  console.log("Hello, " + name);
+}
+
+greet();
+greet("Aman");
+
+// -return Statement
+// --the return statement is used to send a result back from a function.
+// --when return executes, the function stops running at that point.
+// --the returned value can be stored in a variable or used directly.
+
+function add(a, b) {
+  return a + b; // returns the sum
+}
+
+let result = add(5, 10);
+console.log(result);
+
+// -anonymous functions
+// function(){
+// alert('Alerte exécutée par une fonction anonyme');
+// };
+
+// --appeler function()
+// ---avec une variable :
+
+let alerte = function () {
+  alert("Alerte exécutée par une fonction Anonyme appelée par une variable");
+};
+
+alerte();
+
+// ---auto-invoquée
+(function () {
+  alert("Alerte exécutée par une fonction ANONYME auto-invoquée");
+})();
+
+(function nomée() {
+  alert("Alerte exécutée par une fonction NOMEE auto-invoquée");
+})();
+
+// ---lors du déclenchement d'un évènement : fonction callback
+// ----JS AVANCE : LATER
+
+// function num(n, callback) {
+//   return callback(n);
+// }
+// const double = (n) => n * 2;
+// console.log(num(5, double));
+
 // POP-UP
 
 // alert()
 
-alert(whoIam);
-alert("Hello");
+// alert(whoIam);
+// alert("Hello");

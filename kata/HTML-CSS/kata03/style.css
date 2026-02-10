@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #fbd2ae;
+  --main-font-family: Arial, sans-serif;
+  --main-color: #333;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: var(--main-font-family);
+  color: var(--main-color);
+  border-color: 15m dotted aqua;
+}
+
+.card > figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em;
+}
+
+figure {
+  color: rgb(115, 56, 1);
+}
+
+img {
+  width: 50%;
+  border: 0.2em dotted grey;
+  border-radius: 20%;
+}
+
+figaption {
+  padding: 1em;
+}
+
+figcaption,
+p {
+  text-align: center;
+}
+
+/* Media quieries à insérer à la fin */
