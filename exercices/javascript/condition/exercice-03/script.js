@@ -1,17 +1,6 @@
-// Ecris avec des mots ce que fais le code puis lis ta phrase à un encadrant :
-
-// int tmp = 15;
-
-// if (tmp < 0) printf("Freezing weather.");
-// else if (tmp < 10) printf("Very cold weather.");
-// else if (tmp < 20) printf("Cold weather.");
-// else if (tmp < 30) printf("Normal in temp.");
-// else if (tmp < 40) printf("Its Hot.");
-// else printf("Its very hot.");
-
 // Le code compare la température et lui attribue une énoncé.
 
-// Ré-écris ce code en javascript en utilisant des IF/ELSE etc. Puis en utilisant un switch case.
+// Ré-écris ce code en javascript en utilisant des IF/ELSE etc.
 
 let tmp = 15;
 
@@ -33,7 +22,7 @@ function weather(tmp) {
 
 weather(tmp);
 
-//
+// Puis en utilisant un switch case.
 
 let tmp = 20;
 let msg = "";
