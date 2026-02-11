@@ -54,6 +54,7 @@ console.log(age3);
 let age4 = 20;
 age4 = 21; // ici c'est ok car la vriable let permet de changer la valeur de age
 console.log(age4);
+
 // FONCTIONS
 // function nomFonction() { ...code de la fonction }
 

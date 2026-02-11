@@ -35,6 +35,8 @@ let userNumber = prompt(
 );
 userNumber = parseInt(userNumber);
 
+//
+
 function carre(n) {
   return n * n;
 }

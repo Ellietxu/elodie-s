@@ -13,15 +13,16 @@ addition3Numbers();
 // Objectif : Voir dans la console : “Le résultat de la somme est X”.
 // X étant le résultat de la somme de vos trois valeurs de variables.
 
-function addition3NumbersWithArg(a, b, c) {
-  let somme2 = a + b + c;
+function addition3NumbersWithArg(num1, num2, num3) {
+  let somme2 = num1 + num2 + num3;
   console.log("Le résultat de la somme est " + somme2);
 }
 
-let num1 = 4;
-let num2 = 6;
-let num3 = 8;
-addition3NumbersWithArg(num1, num2, num3);
+let a = 1;
+let b = 2;
+let c = 3;
+
+addition3NumbersWithArg(a, b, c);
 
 // Appelez addition3NumbersWithArg() 3 fois avec des valeurs d’argument différentes.
 // Objectif : Voir dans la console :
@@ -32,3 +33,13 @@ addition3NumbersWithArg(num1, num2, num3);
 addition3NumbersWithArg(7, 8, 9);
 addition3NumbersWithArg(10, 11, 12);
 addition3NumbersWithArg(13, 14, 15);
+
+addition3NumbersWithArg(13, 14);
+addition3NumbersWithArg(13, 14, " bonjour");
+
+// "Le résultat de la somme est 6"
+// "Le résultat de la somme est 24"
+// "Le résultat de la somme est 33"
+// "Le résultat de la somme est 42"
+// "Le résultat de la somme est NaN" //NaN = Not a Number
+// "Le résultat de la somme est 27 bonjour"
