@@ -7,8 +7,8 @@ function sendMessage(message, fromName, toName) {
 }
 
 sendMessage(); //pas d'argument donc undefined
-sendMessage("Hello, how are you? ", "Elodie", "Gaedic");
-sendMessage("Super on se voit mardi !", "Linda", "Marc");
+sendMessage("Hello, how are you? ", "Elodie", "Gaedic"); // arguments définis donc code ok
+sendMessage("Super on se voit mardi !", "Linda", "Marc"); // code ok
 
 let contactName = "Jean";
 let myName = "Ada";
