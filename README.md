@@ -65,7 +65,7 @@ Chaque projet est documenté pour refléter mon **processus d’apprentissage**.
 
 ## 📫 Me contacter
 
-- GitHub : [@ton-pseudo](https://github.com/ton-pseudo)
+- GitHub : [@Ellietxu](https://github.com/Ellietxu)
 - LinkedIn : _(optionnel)_
 
 ---
