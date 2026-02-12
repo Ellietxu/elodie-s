@@ -1,4 +1,4 @@
-## 👩‍🔬➡️👩‍💻 De la paillasse au code 🧪💻 | future développeuse web full-stack, curieuse et motivée !
+## 🧪➡️💻 De la paillasse au code | future développeuse web full-stack, curieuse et motivée !
 
 🎓 Étudiante à **Ada Tech School**  
 🎯 Objectif : **Développeuse Web Full Stack**  
