@@ -1,4 +1,4 @@
-## 🧪➡️💻 De la paillasse au code | future développeuse web full-stack, curieuse et motivée !
+### 🧪➡️💻 De la paillasse au code | future développeuse web full-stack, curieuse et motivée !
 
 🎓 Étudiante à **Ada Tech School**  
 🎯 Objectif : **Développeuse Web Full Stack**  
@@ -7,7 +7,7 @@
 
 ---
 
-## 🌱 À propos de moi
+### 🌱 À propos de moi
 
 Anciennement **technicienne de laboratoire en R&D en biologie**,  
 je suis actuellement en formation à **Ada Tech School** pour devenir  
@@ -26,7 +26,7 @@ sensibilité particulière pour les projets **concrets, utiles et bien structur�
 
 ---
 
-## 🛠️ Compétences en cours d’acquisition
+### 🛠️ Compétences en cours d’acquisition
 
 - **Développement Web** : HTML, CSS, JavaScript
 - **Outils** : Git, GitHub, travail collaboratif
@@ -36,7 +36,7 @@ _(Cette liste évoluera au fil de la formation)_
 
 ---
 
-## 🧪 Projets
+### 🧪 Projets
 
 Ce repository regroupe :
 
@@ -49,7 +49,7 @@ Chaque projet est documenté pour refléter mon **processus d’apprentissage**.
 
 ---
 
-## 🚀 Perspectives
+### 🚀 Perspectives
 
 À court terme :
 
@@ -63,7 +63,7 @@ Chaque projet est documenté pour refléter mon **processus d’apprentissage**.
 
 ---
 
-## 📫 Me contacter
+### 📫 Me contacter
 
 - GitHub : [@Ellietxu](https://github.com/Ellietxu)
 - LinkedIn : _(optionnel)_
