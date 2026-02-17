@@ -17,16 +17,15 @@ const basket = [
 ];
 
 function totalCalculated(panier) {
-  //ici panier est le paramètre de la fonction
-  // .reduce(accumulateur, variableAccumule) -> si {variableAccumule} : utilise des clés d'objet à accumuler en les séparant par une ,
-  // => fonction fléchée
-  return panier.reduce(
+  const result = panier.reduce(
     (total, { quantity, price }) => total + quantity * price,
     0,
   );
-  let result = Math.round();
+  if (result !== 0) {
+    return result.toFixed(2);
+  } else {
+    return result;
+  }
 }
 
-console.log(totalCalculated(basket)); // → 13.59
-// basket qui est l'array devienbt l'argument du paraM panier de la fonction totalCalculated
-// c'est en indiquant basket comme argument qu'on précise à la fonction où aller chercher les infos
+console.log(totalCalculated(basket));
