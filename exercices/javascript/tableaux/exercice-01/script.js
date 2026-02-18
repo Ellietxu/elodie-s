@@ -16,6 +16,12 @@ const basket = [
   { name: "Œufs", price: 3.2, quantity: 3 },
 ];
 
+// const basket = [
+//   { name: "Pain", price: 1.5, quantity: 0 },
+//   { name: "Lait", price: 0.99, quantity: 0 },
+//   { name: "Œufs", price: 3.2, quantity: 0 },
+// ];
+
 function totalCalculated(panier) {
   const result = panier.reduce(
     (total, { quantity, price }) => total + quantity * price,
@@ -23,9 +29,8 @@ function totalCalculated(panier) {
   );
   if (result !== 0) {
     return result.toFixed(2);
-  } else {
-    return result;
   }
+  return 0;
 }
 
 console.log(totalCalculated(basket));
