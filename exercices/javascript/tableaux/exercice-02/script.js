@@ -48,3 +48,5 @@ const students = {
 
 // transformer objets en tableaux
 const student = Object.values(students);
+
+// console.log(student)
