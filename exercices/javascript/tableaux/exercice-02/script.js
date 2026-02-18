@@ -46,10 +46,6 @@ const students = {
   },
 };
 
+// console.log(students);
+
 // transformer objets en tableaux pour pouvoir itérer :
-console.log(students);
-const student = Object.values(students);
-console.log(student);
-for (const grade of student) {
-  console.log(grade);
-}
