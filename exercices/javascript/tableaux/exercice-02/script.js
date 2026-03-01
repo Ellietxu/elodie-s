@@ -48,66 +48,79 @@ const students = {
 
 // === Calculer la moyenne de chaque étudiant.e ===
 
-const lst = Object.values(students);
+const studentList = Object.values(students);
 
-function studentAverage(studentToCalculateAverage) {
-  let grade = studentToCalculateAverage.grades;
-  return (mean = grade.reduce((total, n) => total + n, 0) / grade.length);
+function calculateStudentAverage(student) {
+  const grades = student.grades;
+  return grades.reduce((total, n) => total + n, 0) / grades.length;
 }
 
-for (let student of lst) {
-  console.log(` ${student.name} : ${studentAverage(student)}`);
+for (let student of studentList) {
+  console.log(` ${student.name} : ${calculateStudentAverage(student)}`);
 }
 
 // === Trouver les étudiants d'une filière donnée ===
 
-function majorStudent(listeSurLaquelleOnVaTrier, nameOfTheMajor) {
-  let result = [];
-  for (let studentByMajor of listeSurLaquelleOnVaTrier) {
-    if (studentByMajor.major === nameOfTheMajor) {
-      result.push(studentByMajor);
+function getStudentByMajor(studentList, majorName) {
+  let studentsInMajor = [];
+  for (let student of studentList) {
+    if (student.major === majorName) {
+      studentsInMajor.push(student);
     }
   }
-  return result;
+  return studentsInMajor;
 }
 
-console.log(majorStudent(lst, "Computer Science"));
+console.log(getStudentByMajor(studentList, "Computer Science"));
 
 // === Identifier l'étudiante avec la meilleure moyenne ===
 
-function bestStudent(listStudenToCompare) {
+function getTopStudent(studentList) {
   let bestAverage = 0;
-  let nameOfBestStudent = "";
+  let topStudentName = "";
 
-  for (let studentToCompare of listStudenToCompare) {
-    const averageOfThisStudent = studentAverage(studentToCompare);
-    if (averageOfThisStudent > bestAverage) {
-      bestAverage = averageOfThisStudent;
-      nameOfBestStudent = studentToCompare.name;
+  for (let student of studentList) {
+    const average = calculateStudentAverage(student);
+    if (average > bestAverage) {
+      bestAverage = average;
+      topStudentName = student.name;
     }
   }
-  return `The best student is ${nameOfBestStudent} with an overall average of ${bestAverage}`;
+  return `The best student is ${topStudentName} with an overall average of ${bestAverage.toFixed(1)}`;
 }
 
-console.log(bestStudent(lst));
+console.log(getTopStudent(studentList));
 
-// === Statistiques par filière ===
+// === Statistiques par filière et absentéisme ===
 
-function meanOfAverage(studentByAverage) {
-  let arrayOfMean = [];
-  let sumOfAbsence = 0;
-  for (let studentByMean of studentByAverage) {
-    arrayOfMean.push(studentAverage(studentByMean));
-    sumOfAbsence += studentByMean.absences;
+function getMajorStatistics(studentsInMajor) {
+  const averages = [];
+  let totalAbsences = 0;
+  for (let student of studentsInMajor) {
+    averages.push(calculateStudentAverage(student));
+    totalAbsences += student.absences;
   }
-  return [
-    (
-      arrayOfMean.reduce((total, n) => total + n, 0) / arrayOfMean.length
-    ).toFixed(1),
-    sumOfAbsence / studentByAverage.length,
-  ];
+  const majorAverage =
+    averages.reduce((sum, avg) => sum + avg, 0) / averages.length;
+  const averageAbsences = totalAbsences / studentsInMajor.length;
+  return `${majorAverage.toFixed(1)}, ${averageAbsences}`;
 }
 
-console.log(meanOfAverage(majorStudent(lst, "Computer Science")));
+console.log(
+  getMajorStatistics(getStudentByMajor(studentList, "Computer Science")),
+);
 
-// === Ajouter une nouvelle note à une étudiante ===
+// === Ajouter une nouvelle note à un.e étudiant.e ===
+
+function addGrade(ID, newGrade) {
+  for (let student of studentList) {
+    if (student.id === ID) {
+      student.grades.push(newGrade);
+      return `${student.name} : ${newGrade}`;
+    }
+  }
+  return `Student with ID ${ID} not found`;
+}
+
+console.log(addGrade("A003", 4));
+console.log(addGrade("A013", 12));
