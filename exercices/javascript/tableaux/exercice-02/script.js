@@ -111,9 +111,3 @@ function meanOfAverage(studentByAverage) {
 console.log(meanOfAverage(majorStudent(lst, "Computer Science")));
 
 // === Ajouter une nouvelle note à une étudiante ===
-
-function addGrade(nameOfStudent, listOfStudent, newGrade) {
-  nameOfStudent === lst.name;
-
-  return listOfStudent;
-}
