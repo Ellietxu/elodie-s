@@ -8,10 +8,10 @@ button.addEventListener("click", () => {
   title.textContent = "Piou piou";
   title.style.color = "orange";
   const addLi = document.createElement("li");
-  liQuatre.textContent = "poule";
+  addLi.textContent = "poule";
   ul.appendChild(addLi);
-  const li = document.querySelectorAll("li"); // placé ici pour prendre en compte les 3 éléments initiaux plus celui qu'on ajoute
-  li.forEach((maLigne) => {
-    maLigne.style.color = "blue";
-  });
+  // const li = document.querySelectorAll("li"); // placé ici pour prendre en compte les 3 éléments initiaux plus celui qu'on ajoute
+  // li.forEach((maLigne) => {
+  //   maLigne.style.color = "blue";
+  // });
 });
